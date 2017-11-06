@@ -17,7 +17,9 @@ var Events = {
             log('registering event: ' + type);
             log('javaType: ' + javaType);
             Listeners[type] = new Listener();
-            magik.getPlugin().registerEvent(Java.type(javaType).class, Listeners[type], EventPriority.MONITOR, true, new EventCallback({
+            magik.getPlugin().registerEvent(Java.type(javaType).class, 
+            // Listeners[type],
+            EventPriority.MONITOR, true, new EventCallback({
                 callback: function (event) {
                     log('event: ' + type);
                     // Emitter.emit(type, event);

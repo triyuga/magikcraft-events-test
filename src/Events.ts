@@ -25,7 +25,7 @@ const Events = {
 
 			magik.getPlugin().registerEvent(
 				Java.type(javaType).class,
-				Listeners[type],
+				// Listeners[type],
 				EventPriority.MONITOR,
 				true,
 				new EventCallback({
