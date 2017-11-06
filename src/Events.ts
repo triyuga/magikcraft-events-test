@@ -1,6 +1,3 @@
-import { EventEmitter } from 'events';
-const Emitter = new EventEmitter();
-
 const magik = magikcraft.io;
 const log = magik.dixit;
 

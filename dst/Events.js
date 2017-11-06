@@ -1,7 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var events_1 = require("events");
-var Emitter = new events_1.EventEmitter();
 var magik = magikcraft.io;
 var log = magik.dixit;
 var HandlerList = Java.type("org.bukkit.event.HandlerList");
