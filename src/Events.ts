@@ -4,13 +4,11 @@ const log = magik.dixit;
 declare const Java: any;
 const HandlerList = Java.type("org.bukkit.event.HandlerList");
 const Listener = Java.type("org.bukkit.event");
-
 const EventPriority = Java.type("org.bukkit.event.EventPriority");
 const EventCallback = Java.type("io.magikcraft.EventCallback");
 
-
 const eventTypes = {
-	PlayerDeathEvent: 'org.bukkit.event.player.PlayerMoveEvent',
+	PlayerMoveEvent: 'org.bukkit.event.player.PlayerMoveEvent',
 };
 
 const Listeners: any = {};
@@ -40,7 +38,7 @@ const Events = {
 		}
 	},
 
-	unregisterAll() {
+	unregisterAll: () => {
 		for (let type in Listeners) {
 			log('unregistering: ' + type);
 			const listener = Listeners[type];

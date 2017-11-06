@@ -7,7 +7,7 @@ var Listener = Java.type("org.bukkit.event");
 var EventPriority = Java.type("org.bukkit.event.EventPriority");
 var EventCallback = Java.type("io.magikcraft.EventCallback");
 var eventTypes = {
-    PlayerDeathEvent: 'org.bukkit.event.player.PlayerMoveEvent',
+    PlayerMoveEvent: 'org.bukkit.event.player.PlayerMoveEvent',
 };
 var Listeners = {};
 var Events = {
