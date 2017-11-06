@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var magik = magikcraft.io;
 var log = magik.dixit;
 var HandlerList = Java.type("org.bukkit.event.HandlerList");
-// const Listener = Java.type("org.bukkit.event");
+var Listener = Java.type("org.bukkit.event");
 var EventPriority = Java.type("org.bukkit.event.EventPriority");
 var EventCallback = Java.type("io.magikcraft.EventCallback");
 var eventTypes = {
@@ -16,10 +16,8 @@ var Events = {
             var javaType = eventTypes[type];
             log('registering event: ' + type);
             log('javaType: ' + javaType);
-            // Listeners[type] = new Listener();
-            magik.getPlugin().registerEvent(Java.type(javaType).class, 
-            // Listeners[type],
-            EventPriority.MONITOR, true, new EventCallback({
+            Listeners[type] = new Listener();
+            magik.getPlugin().registerEvent(Java.type(javaType).class, Listeners[type], EventPriority.MONITOR, true, new EventCallback({
                 callback: function (event) {
                     log('event: ' + type);
                     // Emitter.emit(type, event);

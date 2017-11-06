@@ -3,7 +3,7 @@ const log = magik.dixit;
 
 declare const Java: any;
 const HandlerList = Java.type("org.bukkit.event.HandlerList");
-// const Listener = Java.type("org.bukkit.event");
+const Listener = Java.type("org.bukkit.event");
 const EventPriority = Java.type("org.bukkit.event.EventPriority");
 const EventCallback = Java.type("io.magikcraft.EventCallback");
 
@@ -21,11 +21,11 @@ const Events = {
 			const javaType = eventTypes[type];
 			log('registering event: ' + type);
 			log('javaType: ' + javaType);
-			// Listeners[type] = new Listener();
+			Listeners[type] = new Listener();
 
 			magik.getPlugin().registerEvent(
 				Java.type(javaType).class,
-				// Listeners[type],
+				Listeners[type],
 				EventPriority.MONITOR,
 				true,
 				new EventCallback({
