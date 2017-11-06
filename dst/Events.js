@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var magik = magikcraft.io;
 var log = magik.dixit;
 var HandlerList = Java.type("org.bukkit.event.HandlerList");
-var Listener = Java.type("org.bukkit.event");
+var Listener = Java.type("org.bukkit.event").class;
 var EventPriority = Java.type("org.bukkit.event.EventPriority");
 var EventCallback = Java.type("io.magikcraft.EventCallback");
 var eventTypes = {

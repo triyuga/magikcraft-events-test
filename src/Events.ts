@@ -3,7 +3,7 @@ const log = magik.dixit;
 
 declare const Java: any;
 const HandlerList = Java.type("org.bukkit.event.HandlerList");
-const Listener = Java.type("org.bukkit.event");
+const Listener = Java.type("org.bukkit.event").class;
 const EventPriority = Java.type("org.bukkit.event.EventPriority");
 const EventCallback = Java.type("io.magikcraft.EventCallback");
 
